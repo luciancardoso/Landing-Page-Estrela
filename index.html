@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&copy; ESTRELA.</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <header>
+            <a href="#" class="logo">estrela</a>
+            <div class="toggle"></div>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <video src="img/video.mp4" loop muted autoplay></video>
+        
+
+        <div class="content">
+            <div class="textBox">
+                <h2>Acredite. Lute. Conquiste.<br> <span>E acima de tudo, </span>Seja feliz.</h2>
+            </div>
+        </div>
+
+        <ul class="social">
+            <li><a href="#"><img src="img/facebook.png" alt="facebook"></a></li>
+            <li><a href="#"><img src="img/twitter.png" alt="twitter"></a></li>
+            <li><a href="#"><img src="img/instagram.png" alt="instagram"></a></li>
+        </ul>
+
+        <div class="footer">
+            <p>Copyright &COPY; Todos os direitos reservados - 2021</p>
+            <p>Desenvolvido por <span>Lucian Cardoso</span></p>
+        </div>
+    </section>
+    
+    <script>
+        const menuToggle = document.querySelector('.toggle');
+        const navbar = document.querySelector('.navbar');
+        menuToggle.onclick = function(){
+            menuToggle.classList.toggle('active');
+            navbar.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

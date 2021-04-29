@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    position: relative;
+    min-height: 100vh;
+    padding: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1000;
+}
+
+section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+header .logo {
+    position: relative;
+    color: #fff;
+    display: inline-block;
+    font-size: 2em;
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-left: 10px;
+    padding: 8px 18px;
+    text-decoration: none;
+    user-select: none;
+}
+
+header ul li a.active,
+header ul li a:hover {
+    background: #0863db;
+    color: yellow;
+    border-radius: 30px;
+}
+
+.content {
+    position: relative;
+}
+
+.content .textBox {
+    position: relative;
+    max-width: 600px;
+}
+
+.content .textBox h2 {
+    color: #fff;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    line-height: 1.2em;
+    font-weight: 700;
+    opacity: 0;
+    animation: slide_right 0.5s linear forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes slide_right {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.content .textBox h2 span {
+    font-size: 1.7em;
+    color: yellow;
+}
+
+.social {
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social li a {
+    position: relative;
+    display: inline-block;
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+}
+
+.social li a img {
+    filter: invert(1);
+    transform: scale(0.7);
+}
+
+.social li a:hover {
+    background: blue;
+    transform: translateY(-10px);
+}
+
+section .footer {
+    text-align: center;
+    margin-bottom: -50rem;
+    color: white;
+    z-index: 1;
+}
+
+section .footer span {
+    color: yellow;
+}
+
+/* Responsivo da Landing Page */
+
+@media(max-width: 991px){
+    section {
+        /* width: 100%; */
+        padding: 150px 80px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .navbar.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.863);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    header ul li {
+        margin: 10px 0;
+    }
+
+    header ul li a {
+        margin-left: 0;
+        font-size: 1.5em;
+    }
+
+    .toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        background: #0863db url(img/menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        z-index: 1000;
+        border-radius: 2px;
+    }
+
+    .toggle.active {
+        background: #0863db url(img/close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .content .textBox h2 {
+        font-size: 1.9em;
+    }
+
+    section .footer {
+        display: inline-block;
+        margin-left: -14.1rem;
+        margin-bottom: -40rem;
+        color: white;
+    }
+
+    .social {
+        position: absolute;
+        top: 75%;
+        right: 0;
+        width: 50px;
+        background: rgba(0, 0, 255, 0.582);
+        transform: translateY(-30%);
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* @media(max-width: 568px){
+
+    section .footer {
+        display: inline-block;
+        margin-left: -14.1rem;
+        margin-bottom: -30rem;
+        color: white;
+    }
+
+    .social {
+        position: absolute;
+        top: 70%;
+        right: 0;
+        width: 50px;
+        background: rgba(0, 0, 255, 0.582);
+        transform: translateY(-30%);
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+    }
+} */
+
+/* @media(max-width: 640px){
+
+    section .footer {
+        display: inline-block;
+        margin-left: -14.1rem;
+        margin-bottom: -25rem;
+        color: white;
+    }
+
+    .social {
+        position: absolute;
+        top: 66%;
+        right: 0;
+        width: 50px;
+        background: rgba(0, 0, 255, 0.582);
+        transform: translateY(-15%);
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+    }
+} */
+
+/* @media(max-width: 667px){
+
+    section .footer {
+        display: inline-block;
+        margin-left: -14.1rem;
+        margin-bottom: -32rem;
+        color: white;
+    }
+
+    .social {
+        position: absolute;
+        top: 70%;
+        right: 0;
+        width: 50px;
+        background: rgba(0, 0, 255, 0.582);
+        transform: translateY(-60%);
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+    }
+} */
+
+@media(max-width: 812px){
+
+    section .footer {
+        display: inline-block;
+        margin-left: -14.1rem;
+        margin-bottom: -40rem;
+        color: white;
+    }
+
+    .social {
+        position: absolute;
+        top: 76%;
+        right: 0;
+        width: 50px;
+        background: rgba(0, 0, 255, 0.582);
+        transform: translateY(-100%);
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+    }
+}
